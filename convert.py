@@ -18,11 +18,11 @@ def convert_temp(unit_in, unit_out, temp):
     unit_in = unit_in.lower();
     unit_out = unit_out.lower();
     if (unit_in == "c" and unit_out == "f"):
-      return (temp)(9/5)
+      return (temp)*(9/5) + 32;
     elif(unit_in =="f" and unit_out == "c"):
-      return;
+      return (temp-32)*(5/9);
     else:
-      return;
+      return "Invalid input"
 
 
 print("c", "f", 0, convert_temp("c", "f", 0), "should be 32.0")

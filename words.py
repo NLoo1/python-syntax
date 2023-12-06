@@ -21,3 +21,18 @@ def printWordsStartingWithE(word_list):
     return output
 
 print("PRINT WORDS STARTING WITH E" + "\n" + printWordsStartingWithE(["eyy", "hey", "goodbye", "eyo", "yes"]))
+
+
+def printWordsWithLetters(word_list, letter_list):
+    output = ""
+
+    for letter in letter_list:
+        letter = letter.upper()
+    
+    for word in word_list:
+        word = word.upper()
+        if(word[0] in letter_list):
+            output+= word + "\n"
+    return output
+
+print("PRINT WORDS WITH LETTERS" + "\n" + printWordsWithLetters(["Apple", "Banana", "Coconut", "Quandong"], ["A", "B", "C"]))
